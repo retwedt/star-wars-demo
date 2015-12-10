@@ -1,0 +1,123 @@
+/* Standard Nav layout */
+
+
+/* Default settings */
+nav {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+nav .logo {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+nav .menu {
+  display: inline-block;
+  padding: 56px 0px 0px 0px; 
+  height: 100%;
+  vertical-align: top;
+  float: right;
+}
+nav .links {
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 10px 24px;
+  color: #cab818;
+  width: 112px;
+}
+nav .links:hover{
+  color: #A09324;
+}
+
+
+/* Dropdown menu */
+.dropdown {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-menu {
+  background-color: black;
+  position: absolute;
+  top: 32px;
+  width: 140px;
+
+  /* Rounded corners */
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+
+  z-index:1001;
+  visibility:hidden;
+  opacity:0;
+  filter:alpha(opacity=0);
+  -webkit-transition:800ms ease;
+  -moz-transition:800ms ease;
+  -o-transition:800ms ease;
+  transition:800ms ease;
+}
+.dropdown:hover .dropdown-menu {
+  visibility:visible;
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
+/* Arrow from css-tricks.com
+    https://css-tricks.com/examples/ShapesOfCSS/ */
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0px 0px 4px 6px;
+  border-top: 4px solid transparent;
+  border-right: 8px solid #cab818;
+  border-bottom: 4px solid transparent;
+}
+.dropdown:hover .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0px 0px -2px 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #A09324;
+}
+.dropdown-menu .sub-links {
+  display: block;
+  font-size: 1.0em;
+  text-decoration: none;
+  padding: 8px 24px;
+  color: #cab818;
+}
+.sub-links:hover{
+  color: #A09324;
+}
+
+
+/* Hide mobile nav button by default */
+#mobile-nav-btn {
+  display: none;
+  visibility: hidden;
+}
+
+
+/* Media Queries for responsive layouts */
+@media screen and (min-width: 761px) and (max-width: 1280px) {
+  nav {
+    width: 700px;
+  }
+  nav .logo {
+    padding: 6px 6px 6px 6px;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+  nav {
+    width: 1200px;
+  }
+  nav .logo {
+    padding: 6px 24px 6px 24px;
+  }
+}
