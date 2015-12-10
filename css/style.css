@@ -381,8 +381,8 @@ footer .social-links a:hover {
     text-align: justify;
   }
   .content #wrapped-img {
-    width:120px;
-    height:80px;
+    width:240px;
+    height:160px;
   }
   #banner-img {
     background-position: -80px;
@@ -405,19 +405,19 @@ footer .social-links a:hover {
     width: 24%;
   }
 }
-@media screen (min-width: 361px) and (max-width: 480px) {
+@media screen and (min-width: 361px) and (max-width: 480px) {
   body {
     font-size: 16px;
   }
   .content {
-    width: 460px;
+    width: 360px;
     margin: auto;
     padding: 10px 0px;
     text-align: justify;
   }
   .content #wrapped-img {
-    width:120px;
-    height:80px;
+    width:240px;
+    height:160px;
   }
   #banner-img {
     background-position: -80px;
@@ -446,10 +446,6 @@ footer .social-links a:hover {
   }
   .content {
     width: 460px;
-  }
-  .content #wrapped-img {
-    width:120px;
-    height:80px;
   }
   #to-top {
     font-size: 0.8em;
