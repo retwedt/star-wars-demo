@@ -367,7 +367,32 @@ footer .social-links a:hover {
 
 
 /* Media Queries for responsive layouts */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 360px) {
+  body {
+    font-size: 16px;
+  }
+  .content {
+    width: 320px;
+    margin: auto;
+    padding: 10px 0px;
+    text-align: justify;
+  }
+  #to-top {
+    font-size: 0.8em;
+  }
+  footer form {
+    width: 75%;
+    margin: auto;
+  }
+  footer form input[type="email"] {
+    width: 76%;
+    margin: 8px auto;
+  }
+  footer form input[type="submit"] {
+    width: 24%;
+  }
+}
+@media screen (min-width: 361px) and (max-width: 480px) {
   body {
     font-size: 16px;
   }

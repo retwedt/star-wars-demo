@@ -111,3 +111,31 @@ nav .links:hover{
   background-color: #A09324;
   cursor: pointer;
 }
+
+
+
+
+@media screen and (max-width: 360px) {
+  nav {
+    width: 320px;
+  }
+  nav .logo {
+    padding: 6px 6px 6px 6px;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  nav {
+    width: 320px;
+  }
+  nav .logo {
+    padding: 6px 6px 6px 6px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 760px) {
+  nav {
+    width: 460px;
+  }
+  nav .logo {
+    padding: 6px 24px 6px 24px;
+  }
+}
