@@ -109,8 +109,8 @@ nav .links:hover{
   z-index:1002;
   height: 32px;
   width: 32px;
-  border: 2px solid #cab818;
-  padding-top: 2px;
+/*  border: 2px solid #cab818;
+*/  padding-top: 2px;
   
   /* Rounded corners */
   border-radius: 4px;
@@ -119,7 +119,7 @@ nav .links:hover{
   -o-border-radius: 4px;
 }
 .bar {
-  height: 12%;
+  height: 8%;
   margin: 14% 10%;
   background-color: #cab818
 }

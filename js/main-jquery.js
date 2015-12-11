@@ -5,7 +5,7 @@
 $(document).ready(function(){
 
 	// initialize animation libraries
-	smoothScroll.init({offset: 100}); // offset option to account for fixed nav bar
+	smoothScroll.init({offset: 90}); // offset option to account for fixed nav bar
 
 	// ***** SCROLL TO TOP *****
 	// hide 'scroll to top' button by default
