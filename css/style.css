@@ -15,27 +15,11 @@ html, body {
 }
 #wrap {
   font-size: 1.6em;
-  margin: 112px auto 0px auto;
+  margin: 92px auto 0px auto;
   width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
-
-/* Fixed header */
-header {
-  width: 100%;
-  height: 112px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  /* Background image for nav bar */
-/*  background-image: url("../img/nav-stars.jpg");
-  background-repeat: both;
-  background-size: 64%;*/
-  background-color: black;
 }
 
 
@@ -75,11 +59,12 @@ section {
   color: white;
 }
 #force-banner {
-  height: 160px;
+  min-height: 160px;
 }
 .content {
   margin: auto;
-  padding: 10px 0px;
+  padding: 10px;
+  padding-bottom: 20px;
   text-align: justify;
 }
 .content h2 {
@@ -104,6 +89,8 @@ section {
 }
 .img-gallery a img {
   margin: 0 auto;
+  width: 206px;
+  height: 320px;
 
   /* Rounded corners */
   border-radius: 4px;
@@ -152,6 +139,8 @@ section {
   text-align: center;
 }
 .choose-side img {
+  width:240px;
+  height:240px;
   display: block;
   margin: 0 auto;
 }
@@ -191,8 +180,6 @@ section {
   border: none;
 }
 
-
-
 /* Footer */
 footer {
   width: 100%;
@@ -205,9 +192,6 @@ footer {
 footer .content {
   text-align: center;
 }
-/*footer #address, footer h3 {
-  text-align: center;
-}*/
 footer .content a {
   text-decoration: none;
   display: block;
@@ -274,6 +258,10 @@ footer .social-links a {
   display: inline-block;
   vertical-align: top;
 }
+footer .social-links a img {
+  width: 36px;
+  height: 36px;
+}
 footer .social-links a:hover {
   opacity: 0.5;
 }
@@ -288,83 +276,34 @@ footer .social-links a:hover {
   bottom: 16%;
   right: 36px;
   z-index: 600;
+  opacity: 0.35;
 
   height: 60px;
   width: 42px;
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color: #C0C0C0;
   border: 1px solid #A9A9B2;
-  text-align: center;
-  font-size: 1.0em;
-  cursor: pointer;
 
   /* Rounded corners */
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-}
-#to-top a {
+
+  /* Text */
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   color: #0F0E0E;
-}
-/* Chevron from css-tricks.com
-    https://css-tricks.com/examples/ShapesOfCSS/ */
-#chevron {
-  position: relative;
   text-align: center;
-  padding: 10px;
-  padding-bottom: 6px;
-  margin: 10px 0px 0px 10px;
-  height: 6px;
-  width: 20px;
+  font-size: 0.86em;
+
+  cursor: pointer;
 }
-#chevron:before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 0;
-  height: 40%;
-  width: 51%;
-  background: #464242;
-  -webkit-transform: skew(0deg, -24deg);
-  -moz-transform: skew(0deg, -24deg);
-  -ms-transform: skew(0deg, -24deg);
-  -o-transform: skew(0deg, -24deg);
-  transform: skew(0deg, -24deg);
+#to-top img {
+  display: block;
+  margin: 10px auto 6px auto;
 }
-#chevron:after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  right: 0;
-  height: 40%;
-  width: 50%;
-  background: #464242;
-  -webkit-transform: skew(0deg, 24deg);
-  -moz-transform: skew(0deg, 24deg);
-  -ms-transform: skew(0deg, 24deg);
-  -o-transform: skew(0deg, 24deg);
-  transform: skew(0deg, 24deg);
-}​
 #to-top:hover {
-  /* This doesn't seem to be working... */
-  background-color: red;
+  opacity: 0.8;
 }
-#to-top:hover a {
-  color: #626366;
-}
-#to-top:hover #chevron:before, #to-top:hover #chevron:after {
-  background-color: #626366;
-}
-
-
-
-#page1-title h1 {
-  font-size: 2.0em;
-  text-align: center;
-
-  text-shadow: 1px 1px 4px #9E9FA4;
-}
-
 
 
 
@@ -372,26 +311,32 @@ footer .social-links a:hover {
 /* Media Queries for responsive layouts */
 @media screen and (max-width: 360px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  #wrap {
+    margin-top: 72px;
   }
   .content {
     width: 320px;
-    margin: auto;
-    padding: 10px 0px;
-    text-align: justify;
   }
   .content #wrapped-img {
     width:240px;
     height:160px;
+    margin: auto;
+    display: block;
+    float: none;
   }
   #banner-img {
-    background-position: -80px;
+    background-position: -100px;
   }
   #banner-img h3 {
     font-size: 1.0em;
   }
   #to-top {
     font-size: 0.8em;
+  }
+  #force-banner {
+    font-size: 0.6em;
   }
   footer form {
     width: 75%;
@@ -403,30 +348,39 @@ footer .social-links a:hover {
   }
   footer form input[type="submit"] {
     width: 24%;
+  }
+  .choose-side button {
+    font-size: 0.6em;
   }
 }
 @media screen and (min-width: 361px) and (max-width: 480px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  #wrap {
+    margin-top: 72px;
   }
   .content {
     width: 360px;
-    margin: auto;
-    padding: 10px 0px;
-    text-align: justify;
   }
   .content #wrapped-img {
     width:240px;
     height:160px;
+    margin: auto;
+    display: block;
+    float: none;
   }
   #banner-img {
-    background-position: -80px;
+    background-position: -120px;
   }
   #banner-img h3 {
     font-size: 1.0em;
   }
   #to-top {
     font-size: 0.8em;
+  }
+  #force-banner {
+    font-size: 0.6em;
   }
   footer form {
     width: 75%;
@@ -439,15 +393,35 @@ footer .social-links a:hover {
   footer form input[type="submit"] {
     width: 24%;
   }
+  .choose-side button {
+    font-size: 0.6em;
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 760px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  #wrap {
+    margin-top: 72px;
   }
   .content {
     width: 460px;
   }
+  .content #wrapped-img {
+    margin: auto;
+    display: block;
+    float: none;
+  }
+/*  #banner-img {
+    background-position: -120px;
+  }
+  #banner-img h3 {
+    font-size: 1.0em;
+  }*/
   #to-top {
+    font-size: 0.8em;
+  }
+  #force-banner {
     font-size: 0.8em;
   }
   footer form {
@@ -460,6 +434,9 @@ footer .social-links a:hover {
   }
   footer form input[type="submit"] {
     width: 20%;
+  }
+  .choose-side button {
+    font-size: 0.6em;
   }
 }
 @media screen and (min-width: 761px) and (max-width: 1280px) {

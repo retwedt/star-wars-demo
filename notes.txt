@@ -1,0 +1,5 @@
+and  the star wars logo left padding/margin is a bit large
+are the poster images hyperlinks to the current page?
+oh and just flipped to landscape
+the logo + the url bar take up about half the screen, so a lot of the text gets occluded
+it could probably be shrunk, or maybe even omitted, when there isn't enough vertical real estate

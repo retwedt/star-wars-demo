@@ -1,6 +1,21 @@
 /* Mobile Nav layout */
 
 
+/* Fixed header */
+header {
+/*  transition: height 0.4s ease; */
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* Background image for nav bar */
+/*  background-image: url("../img/nav-stars.jpg");
+  background-repeat: both;
+  background-size: 64%;*/
+  background-color: black;
+}
 /* Mobile Menu */
 nav {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
@@ -11,19 +26,25 @@ nav {
 }
 nav .logo {
   display: inline-block;
-  padding: 5px 24px 5px 24px;
   vertical-align: top;
 }
+nav .logo .links {
+  padding: 6px 0px;
+}
 nav .menu {
-/*  display: none;
-*/  position: absolute;
-  top: 85px;
+  overflow: scroll;
+  display: none;
+  position: absolute;
+  top: 65px;
   right: -5px;
   z-index:1001;
   padding-top: 10px;
   background-color: black;
   text-align: right;
   width: 220px;
+}
+nav .menu::-webkit-scrollbar { 
+    display: none; 
 }
 nav .links {
   display: block;
@@ -83,13 +104,13 @@ nav .links:hover{
 /* Mobile Nav Button */
 #mobile-nav-btn {
   position: absolute;
-  top: 40px;
+  top: 18px;
   right: 20px;
   z-index:1002;
-  height: 35px;
-  width: 35px;
-  padding-top: 3px;
+  height: 32px;
+  width: 32px;
   border: 2px solid #cab818;
+  padding-top: 2px;
   
   /* Rounded corners */
   border-radius: 4px;
@@ -98,9 +119,8 @@ nav .links:hover{
   -o-border-radius: 4px;
 }
 .bar {
-  width: 76%;
-  height: 2px;
-  margin: 5px 12% 5px 12%;
+  height: 12%;
+  margin: 14% 10%;
   background-color: #cab818
 }
 #mobile-nav-btn:hover {
@@ -120,7 +140,11 @@ nav .links:hover{
     width: 320px;
   }
   nav .logo {
-    padding: 6px 6px 6px 6px;
+    padding: 0px;
+  }
+  nav .logo img {
+    width: 120px;
+    height: auto;
   }
 }
 @media screen and (min-width: 361px) and (max-width: 480px) {
@@ -128,7 +152,11 @@ nav .links:hover{
     width: 320px;
   }
   nav .logo {
-    padding: 6px 6px 6px 6px;
+    padding: 0px;
+  }
+  nav .logo img {
+    width: 120px;
+    height: auto;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 760px) {
@@ -136,6 +164,10 @@ nav .links:hover{
     width: 460px;
   }
   nav .logo {
-    padding: 6px 24px 6px 24px;
+    padding: 0px 18px 0px 18px;
+  }
+  nav .logo img {
+    width: 120px;
+    height: auto;
   }
 }

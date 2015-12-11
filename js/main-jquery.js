@@ -7,17 +7,6 @@ $(document).ready(function(){
 	// initialize animation libraries
 	smoothScroll.init({offset: 100}); // offset option to account for fixed nav bar
 
-
-	// ***** DETERMINE DESKTOP/MOBILE MENU ON PAGE LOAD *****
-	if (window.innerWidth > 760) {
-		$("#mobile-nav-btn").hide();
-		$(".menu").show();
-	} else {
-		$("#mobile-nav-btn").show();
-		$(".menu").hide();
-	}
-
-
 	// ***** SCROLL TO TOP *****
 	// hide 'scroll to top' button by default
 	if (window.scrollY < 400) {
@@ -70,7 +59,7 @@ $(document).ready(function(){
 		$(".arrow").addClass("arrow-left");
 	});
 	// accordion-style dropdown for mobile menu
-	$(".dropdown .links").click(function(event){
+	$(".dropdown .links").click(function(event) {
 		event.preventDefault();
 		if (window.innerWidth <= 760) {
 			$(".dropdown-menu").slideToggle();
@@ -84,5 +73,11 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	// hide the mobile menu after any link is clicked
+	$(".menu > .links, .sub-links").click(function(event) {
+		event.preventDefault();
+		$(".menu").fadeToggle(600);
+	})
 
 });
