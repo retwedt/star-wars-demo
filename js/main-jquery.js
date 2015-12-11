@@ -77,7 +77,9 @@ $(document).ready(function(){
 	// hide the mobile menu after any link is clicked
 	$(".menu > .links, .sub-links").click(function(event) {
 		event.preventDefault();
-		$(".menu").fadeToggle(600);
+		if (window.innerWidth <= 760) {
+			$(".menu").fadeToggle(600);
+		}
 	})
 
 });
