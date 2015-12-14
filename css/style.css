@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 html, body {
-  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+  font-family: "Palatino", "Palatino Linotype", "Palatino LT STD", "Book Antiqua", "Georgia", serif;
   width: 100%;
   min-width: 360px;
   height: 100%;
@@ -14,12 +14,12 @@ html, body {
   font-size: 10px;
 }
 #wrap {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin: 92px auto 0px auto;
   width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
 }
 
 
@@ -145,8 +145,9 @@ section {
   margin: 0 auto;
 }
 .choose-side button {
+  outline: none;
   display: block;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   font-size: 0.8em;
   height: 2.4em;
   width: 40%;
@@ -187,7 +188,7 @@ footer {
   color: white;
   padding: 0px 0px 10px 0px;
   font-size: 0.8em;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
 }
 footer .content {
   text-align: center;
@@ -213,10 +214,11 @@ footer form label {
 footer form input[type="email"] {
 /*  min-width: calc(100% - 56px);
 */  width: 80%;
-  margin: 2px auto;
+  margin: 4px auto;
   line-height: 1.4em;
 }
 footer form input[type="submit"] {
+  outline: none;
   font-size: 0.8em;
   height: 2.4em;
 /*  min-width: 54px;
@@ -273,7 +275,7 @@ footer .social-links a:hover {
 /* 'Scroll to top' button */
 #to-top {
   position: fixed;
-  bottom: 16%;
+  bottom: 36px;
   right: 36px;
   z-index: 600;
   opacity: 0.35;
@@ -281,6 +283,7 @@ footer .social-links a:hover {
   height: 60px;
   width: 42px;
   background-color: #C0C0C0;
+  background-color: rgba(192, 192, 192, 0.75);
   border: 1px solid #A9A9B2;
 
   /* Rounded corners */
@@ -290,7 +293,7 @@ footer .social-links a:hover {
   -o-border-radius: 4px;
 
   /* Text */
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   color: #0F0E0E;
   text-align: center;
   font-size: 0.86em;
@@ -318,6 +321,7 @@ footer .social-links a:hover {
   }
   .content {
     width: 320px;
+    text-align: left;
   }
   .content #wrapped-img {
     width:240px;
@@ -348,6 +352,9 @@ footer .social-links a:hover {
   }
   footer form input[type="submit"] {
     width: 24%;
+    height: 28px;
+    margin: 6px 0px;
+    font-size: 0.6em;
   }
   .choose-side button {
     font-size: 0.6em;
@@ -355,13 +362,14 @@ footer .social-links a:hover {
 }
 @media screen and (min-width: 361px) and (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   #wrap {
     margin-top: 72px;
   }
   .content {
-    width: 360px;
+    width: 340px;
+    text-align: left;
   }
   .content #wrapped-img {
     width:240px;
@@ -392,6 +400,9 @@ footer .social-links a:hover {
   }
   footer form input[type="submit"] {
     width: 24%;
+    height: 28px;
+    margin: 6px 0px;
+    font-size: 0.8em;
   }
   .choose-side button {
     font-size: 0.6em;
@@ -399,13 +410,13 @@ footer .social-links a:hover {
 }
 @media screen and (min-width: 481px) and (max-width: 760px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   #wrap {
     margin-top: 72px;
   }
   .content {
-    width: 460px;
+    width: 420px;
   }
   .content #wrapped-img {
     margin: auto;
@@ -434,6 +445,8 @@ footer .social-links a:hover {
   }
   footer form input[type="submit"] {
     width: 20%;
+    height: 28px;
+    margin: 6px 0px;
   }
   .choose-side button {
     font-size: 0.6em;
@@ -441,11 +454,20 @@ footer .social-links a:hover {
 }
 @media screen and (min-width: 761px) and (max-width: 1280px) {
   .content {
-    width: 700px;
+    width: 640px;
+  }
+  footer form input[type="email"] {
+    width: 74%;
+  }
+  footer form input[type="submit"] {
+    width: 26%;
+  }
+  footer .social-links a {
+    padding: 6px 6px;
   }
 }
 @media screen and (min-width: 1281px) and (max-width: 1920px) {
   .content {
-    width: 1200px;
+    width: 960px;
   }
 }

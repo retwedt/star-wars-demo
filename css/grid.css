@@ -106,7 +106,7 @@
     display: block;
   }
 }
-@media screen and (min-width: 361px) and (max-width: 460px) {
+@media screen and (min-width: 361px) and (max-width: 480px) {
   .col-5-1 {
     width: 100%;
     display: block;

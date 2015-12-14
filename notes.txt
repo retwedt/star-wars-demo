@@ -1,5 +1,22 @@
-and  the star wars logo left padding/margin is a bit large
-are the poster images hyperlinks to the current page?
-oh and just flipped to landscape
-the logo + the url bar take up about half the screen, so a lot of the text gets occluded
-it could probably be shrunk, or maybe even omitted, when there isn't enough vertical real estate
+Text legibility:
+	Desktop 
+		- Font feels a little too small on desktop 
+		- Line lengths are super long, which makes reading hard.  The standard design advice is to stick to 45 - 85 ish characters per line. 
+		- Column width could also be shrunk to get closer to a comfortable line length
+		- Another workaround would be to turn the ipsum content in the sections into something other than raw text - ipsum interviews, or an ipsum pull quote, etc.
+	Mobile
+		- Margins are good in mobile portrait, but are oversized in mobile landscape
+		- Font size is a bit oversized on an s4 screen which makes the content hard to read.  It could be dropped to something equivalent to 18px.  Same idea on line length - getting it to 45 characters per line.
+		- Justified text on the web is one of those tricky things that is polarizing.  I've definitely heard many arguments for avoiding it completely (or at least until CSS provides enough control over layout).  On mobile (with a smaller font size), I tend to find the between word spacing to be a distraction.   
+
+Nav:
+	Expanded menu is larger than some landscape screens - a common solution on mobile, at least from perusing awwwards, is to do a full screen menu.  Very likely with JS.
+
+Back to Top:
+	Button could be moved down a bit, so that it's equidistant from the bottom and right of the screen
+	An alternative for small mobile screens, where it takes up a chunk of reading screen real estate, might be to put it in the header bar
+	
+Small:
+	On mobile, the subscribe/submit button is taller than the input
+	Outline: none on buttons
+	Might be good to put quotes around the multiword fonts in the font-family rules
