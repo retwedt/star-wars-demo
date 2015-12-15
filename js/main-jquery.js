@@ -17,9 +17,9 @@ $(document).ready(function(){
 	// show 'scroll to top' button when you have scrolled down
 	// a certain amount on the page
 	$(window).scroll(function() {
-		if (window.scrollY < 400) {
+		if (window.scrollY < 400 && window.innerWidth > 760) {
 			$("#to-top").fadeOut(600);
-		} else if (window.scrollY >= 400) {
+		} else if (window.scrollY >= 400 && window.innerWidth > 760) {
 			$("#to-top").fadeIn(600);
 		}
 	});

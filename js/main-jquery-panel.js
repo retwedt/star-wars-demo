@@ -5,12 +5,12 @@
 $(document).ready(function(){
 
 	// initialize animation libraries
-	smoothScroll.init({offset: 60}); // offset option to account for fixed nav bar
+	smoothScroll.init({offset: 90}); // offset option to account for fixed nav bar
 
 
 	// ***** SCROLL TO TOP *****
 	// hide 'scroll to top' button by default
-	if (window.scrollY < 400) {
+	if (window.scrollY < 400  && window.innerWidth > 760) {
 		$("#to-top").hide();
 	} else {
 		$("#to-top").show();
@@ -18,9 +18,9 @@ $(document).ready(function(){
 	// show 'scroll to top' button when you have scrolled down
 	// a certain amount on the page
 	$(window).scroll(function() {
-		if (window.scrollY < 400) {
+		if (window.scrollY < 400  && window.innerWidth > 760) {
 			$("#to-top").fadeOut(600);
-		} else if (window.scrollY >= 400) {
+		} else if (window.scrollY >= 400  && window.innerWidth > 760) {
 			$("#to-top").fadeIn(600);
 		}
 	});
@@ -40,10 +40,13 @@ $(document).ready(function(){
 			$(".dropdown-menu").slideDown(10);
 			$(".arrow").addClass("arrow-down");
 			$(".arrow").removeClass("arrow-left");
+			$("header").css("overflow-y", "visible");
 			hidden = true;
 		} else { // for mobile
 			$(".arrow").removeClass("arrow-down");
 			$(".arrow").addClass("arrow-left");
+			$("#to-top").hide();
+			$("header").css("overflow-y", "hidden");
 		}
 	});
 	// get initial state of mobile nav panel (hidden = true)
@@ -52,11 +55,13 @@ $(document).ready(function(){
 		// close dropdown menu by default
 		$(".dropdown-menu").slideUp(10);
 		// when menu is shown, animate header to cover entire height of screen
-		if (!hidden) {
+		if (!hidden) { // hide menu
 			$("header").animate({minHeight: "1%"}, "ease");
+			$("header").css("overflow-y", "hidden");
 			hidden = !hidden;
-		} else {
+		} else { // show menu
 			$("header").animate({minHeight: "100%"}, "ease");
+			$("header").css("overflow-y", "scroll");
 			hidden = !hidden;
 		}
 	});

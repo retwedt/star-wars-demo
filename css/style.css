@@ -314,7 +314,7 @@ footer .social-links a:hover {
 /* Media Queries for responsive layouts */
 @media screen and (max-width: 360px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   #wrap {
     margin-top: 72px;
@@ -337,6 +337,7 @@ footer .social-links a:hover {
     font-size: 1.0em;
   }
   #to-top {
+    display: none;
     font-size: 0.8em;
   }
   #force-banner {
@@ -385,6 +386,7 @@ footer .social-links a:hover {
     font-size: 1.0em;
   }
   #to-top {
+    display: none;
     font-size: 0.8em;
   }
   #force-banner {
@@ -430,6 +432,7 @@ footer .social-links a:hover {
     font-size: 1.0em;
   }*/
   #to-top {
+    display: none;
     font-size: 0.8em;
   }
   #force-banner {
@@ -456,6 +459,10 @@ footer .social-links a:hover {
   .content {
     width: 640px;
   }
+  #to-top {
+    display: block;
+    font-size: 0.8em;
+  }
   footer form input[type="email"] {
     width: 74%;
   }
@@ -469,5 +476,9 @@ footer .social-links a:hover {
 @media screen and (min-width: 1281px) and (max-width: 1920px) {
   .content {
     width: 960px;
+  }
+  #to-top {
+    display: block;
+    font-size: 0.8em;
   }
 }
