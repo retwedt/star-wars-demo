@@ -1,10 +1,6 @@
 # Star Wars Demo Website
 
-This multi-user chat app is a project from Course 4 Server-side Programming at CodeAbode.  Users can enter their name, view a list of all users in the chat room, and communicate in real time with each other!   This app takes advantage of several technologies:
-
--	[JQuery](https://jquery.com/) - a popular JS library built around simplifying code and maximizing compatibility
--	[Smooth Scroll](https://github.com/cferdinandi/smooth-scroll) - a lightweight script to animate scrolling to anchor links.
--	[Socket.io](http://socket.io/) - a package for real-time communication using websockets and Node.js
+The Star Wars fan site is an example of a final project students would complete during the Intro to Modern Web Design course at CodeAbode.  This site demonstrates use of the HTML and CSS elements learned by the students, as well as more advanced techniques like column layouts and CSS transitions.
 
 ## Directory Structure
 
